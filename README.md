@@ -2,6 +2,8 @@
 
 
 #BUILD PACK
+
+
 ``
-heroku buildpacks:set https://github.com/jincod/dotnetcore-buildpack.git
+heroku buildpacks:set https://github.com/jincod/dotnetcore-buildpack
 ``
