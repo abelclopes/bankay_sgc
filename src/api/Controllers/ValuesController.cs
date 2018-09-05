@@ -21,7 +21,9 @@ namespace api.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            var amanha = DateTime.Now.AddDays(1);
+            var lista  = new List<string>();
+            return amanha.ToShortDateString();
         }
 
         // POST api/values

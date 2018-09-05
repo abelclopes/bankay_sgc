@@ -30,14 +30,14 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc()
-            // .AddJsonOptions(opt =>
-            // {
-            //     // Force all ISO8601 timestamp conversions to use UTC (ie: YYYY-MM-DDTHH:MM:SS.FFFZ)
-            //     opt.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
-            //     opt.SerializerSettings.DateParseHandling = DateParseHandling.DateTimeOffset;
-            //     opt.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
-            //     opt.SerializerSettings.DateFormatString = "yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'";
-            // })
+            .AddJsonOptions(opt =>
+            {
+                // Force all ISO8601 timestamp conversions to use UTC (ie: YYYY-MM-DDTHH:MM:SS.FFFZ)
+                opt.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
+                opt.SerializerSettings.DateParseHandling = DateParseHandling.DateTimeOffset;
+                opt.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
+                opt.SerializerSettings.DateFormatString = "yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'";
+            })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             
             services.AddHttpContextAccessor();
