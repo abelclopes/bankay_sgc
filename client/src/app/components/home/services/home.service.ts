@@ -8,9 +8,6 @@ export class HomeService{
 
     public getHomeList(){
         return this.homeRestService.getHomeList()
-        .subscribe(data =>{
-            console.log(data)
-            return data;
-        })
+       
     }
 }

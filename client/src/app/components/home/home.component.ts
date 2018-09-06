@@ -15,6 +15,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.homeService.getHomeList()
+    .subscribe(data =>{
+      console.log(data)
+      this.posts =  data;
+  })
     
   }
 
