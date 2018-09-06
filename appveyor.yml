@@ -1,0 +1,9 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+build_script:
+  - cd client
+  - npm install
+  - ng build --prod
+  - docker build -t bankay_sgc .
+  
